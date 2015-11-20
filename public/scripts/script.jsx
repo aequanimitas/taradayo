@@ -1,5 +1,7 @@
 var CourtInfo = React.createClass({
-  render: return <span className="court"></span>
+  render: function() {
+    return (<span className="court"></span>);
+  }
 });
 var MapBox = React.createClass({
   showInfo: function(e) {
