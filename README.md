@@ -5,3 +5,9 @@ Taradayo
 - on ```/usr/local/etc/renderd.conf```
     - set ```CORS=*```
     - adjust zoom levels
+- starting up tile server
+    ```
+    sudo mkdir /var/run/renderd
+    sudo chown username /var/run/renderd
+    sudo -u username renderd -f -c /usr/local/etc/renderd.conf
+    ```
