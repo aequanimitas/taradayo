@@ -1,4 +1,10 @@
+var CourtInfo = React.createClass({
+  render: return <span className="court"></span>
+});
 var MapBox = React.createClass({
+  showInfo: function(e) {
+    console.log(e);
+  },
   setupCourtMarkers: function() {
     var courts = [
       { 
@@ -28,10 +34,7 @@ var MapBox = React.createClass({
         .bindPopup(`<b>${markerInfo}</b>`)
         .addTo(this.map);
       
-      marker.on('click', function(e) {
-        // render a div inside react
-        console.dir(e.target.options.title);
-      });
+      marker.on('click', this.showInfo, this);
       markers.push(marker);
     }, this);
   },
